@@ -9,6 +9,13 @@ from game_stats import GameStats
 from button import Button
 from heads_up_display import HUD
 from miss_line import MissLine
+from pygame.locals import *
+from pygame import mixer
+
+def bg_music():
+    pygame.mixer.init()
+    pygame.mixer.music.load('assets/background_music.ogg')
+    pygame.mixer.music.play()
 
 def run_game(): 
     '''Initialise game and create screen'''
@@ -24,6 +31,7 @@ def run_game():
     stats = GameStats(settings, bullets_target)
     target = Target(settings, screen, stats)
     play_button = Button(screen, 'Play')
+    bg_music()
     hud = HUD(screen, settings, stats, bullets_target)
     m_line = MissLine(settings, screen)
 

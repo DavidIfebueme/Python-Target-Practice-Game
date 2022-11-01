@@ -1,3 +1,4 @@
+import os
 import pygame
 from pygame.sprite import Group
 
@@ -17,6 +18,13 @@ def bg_music():
     pygame.mixer.music.load('assets/background_music.ogg')
     pygame.mixer.music.play()
 
+
+def make_background(size):
+    folder = os.path.dirname(__file__)
+    filename = os.path.join(folder, "Images", "background_image.jpg")
+    background = pygame.image.load(filename)
+    return pygame.transform.scale(background, size)
+
 def run_game(): 
     '''Initialise game and create screen'''
     pygame.init()
@@ -24,6 +32,8 @@ def run_game():
     screen = pygame.display.set_mode((settings.screen_width, settings.screen_depth))
     pygame.display.set_caption('Target Practice')
     clock = pygame.time.Clock()
+    background = make_background(screen.get_size())
+    screen.blit(background, (0, 0))
     
     bullets_target = []
     shooter = Shooter(screen, settings)

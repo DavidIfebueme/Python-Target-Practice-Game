@@ -11,8 +11,8 @@ class HUD():
         self.bullets_target = bullets_target
 
         #Font settings
-        self.text_colour = (100, 0, 0)
-        self.font = pygame.font.SysFont('arialblack', 20)
+        self.text_colour = (255, 0, 0)
+        self.font = pygame.font.Font('assets\MONOCROME.ttf', 20)
 
         self.prep_stage()
         self.prep_hits()

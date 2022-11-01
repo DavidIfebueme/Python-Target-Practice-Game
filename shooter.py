@@ -8,7 +8,7 @@ class Shooter:
         self.settings = settings
 
 
-        self.image = pygame.image.load('Images/shooter.bmp') #to access the shooter image in folder
+        self.image = pygame.image.load('Images/spacecraft.jpg') #to access the shooter image in folder
         # Next two lines to get rect of image and screen
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()

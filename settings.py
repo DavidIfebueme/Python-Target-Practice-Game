@@ -5,7 +5,7 @@ class Settings():
         #Screen settings
         self.screen_width = 600
         self.screen_depth = 600
-        self.bg_colour = (230, 230, 230)
+        self.bg_colour = (0, 0, 0)
         
         #Ship settings
         self.shooter_speed = 12

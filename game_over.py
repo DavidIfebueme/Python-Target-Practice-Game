@@ -9,7 +9,8 @@ class GameOver():
 
 
         #Load image and get rect
-        self.image = pygame.image.load('images/game_over.bmp')
+        self.image = pygame.image.load('images/game_over.jpg')
+        self.image.set_colorkey('BLACK')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 
@@ -19,7 +20,7 @@ class GameOver():
 
         #Font settings
         self.text_colour = (0, 0, 0)
-        self.font = pygame.font.SysFont('arialblack', 20)
+        self.font = pygame.font.Font('assets\MONOCROME.ttf', 20)
 
         self.prep_stage()
         self.prep_total_hits()

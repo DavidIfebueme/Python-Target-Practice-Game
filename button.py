@@ -11,7 +11,7 @@ class Button():
         self.width, self.height = 200, 50
         self.button_colour = (255, 0, 0)
         self.text_colour = (255, 255, 255)
-        self.font = pygame.font.SysFont('arialblack', 32)
+        self.font = pygame.font.Font('assets\MONOCROME.ttf', 20)
 
         #Build rect and set position
         self.rect = pygame.Rect(0, 0, self.width, self.height)

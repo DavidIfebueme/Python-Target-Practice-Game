@@ -62,6 +62,6 @@ class GameOver():
     def blitme(self):
         '''Draw game over onto screen'''
         self.screen.blit(self.image, self.rect)
-        #self.screen.blit(self.stage_image, self.stage_rect)
+        
         self.screen.blit(self.total_hits_image, self.total_hits_rect)
         self.screen.blit(self.total_misses_image, self.total_misses_rect)
